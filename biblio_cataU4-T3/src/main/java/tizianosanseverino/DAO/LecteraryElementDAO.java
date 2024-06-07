@@ -2,9 +2,6 @@ package tizianosanseverino.DAO;
 import tizianosanseverino.entities.LecteraryElement;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
-import tizianosanseverino.entities.Book;
-
-import tizianosanseverino.entities.Magazine;
 
 import java.util.UUID;
 
@@ -15,10 +12,10 @@ public class LecteraryElementDAO {
         this.em = em;
     }
 
-    public void save(LecteraryElement lecteraryElement) {
+    public void save(LecteraryElement element) {
         EntityTransaction transaction = em.getTransaction();
         transaction.begin();
-        em.persist(lecteraryElement);
+        em.persist(element);
         transaction.commit();
         System.out.println("salvato");
 

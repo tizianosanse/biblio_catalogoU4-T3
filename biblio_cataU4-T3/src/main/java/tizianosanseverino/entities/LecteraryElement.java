@@ -8,9 +8,10 @@ import java.util.UUID;
 @Entity
 @Table(name="lecterary_element")
 @Inheritance(strategy = InheritanceType.JOINED)
-@DiscriminatorColumn(name = "type_element")
+@DiscriminatorColumn(name="type_element")
 public abstract class  LecteraryElement {
     @Id
+    @GeneratedValue
     private UUID isbn;
 
     private String title;
@@ -31,5 +32,15 @@ public abstract class  LecteraryElement {
 
     public String getTitle() {
         return title;
+    }
+
+    @Override
+    public String toString() {
+        return "LecteraryElement{" +
+                "isbn=" + isbn +
+                ", title='" + title + '\'' +
+                ", yearOfPublication=" + yearOfPublication +
+                ", numberOfPage=" + numberOfPage +
+                '}';
     }
 }

@@ -1,4 +1,5 @@
 package tizianosanseverino;
+import tizianosanseverino.entities.Book;
 import tizianosanseverino.entities.Magazine;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
@@ -15,6 +16,8 @@ public class Application {
         EntityManager em = emf.createEntityManager();
         LecteraryElementDAO lmd = new LecteraryElementDAO(em);
         Magazine rivista1= new Magazine("la gazzetta dello sport",2024,40, Periodicity.WEEKLY);
+
         lmd.save(rivista1);
+        System.out.println(rivista1);
     }
 }
