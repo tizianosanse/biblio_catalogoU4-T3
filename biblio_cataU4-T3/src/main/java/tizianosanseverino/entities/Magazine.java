@@ -14,4 +14,9 @@ public class Magazine extends LecteraryElement{
     private Periodicity periodicity;
 
     public Magazine (){}
+
+    public Magazine(String title, int yearOfPublication, int numberOfPage, Periodicity periodicity) {
+        super(title, yearOfPublication, numberOfPage);
+        this.periodicity = periodicity;
+    }
 }

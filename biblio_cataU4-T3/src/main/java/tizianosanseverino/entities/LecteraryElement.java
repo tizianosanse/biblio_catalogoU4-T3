@@ -12,14 +12,24 @@ import java.util.UUID;
 public abstract class  LecteraryElement {
     @Id
     private UUID isbn;
-    @Column(name="title")
+
     private String title;
-    @Column(name="year_of_publication")
+
     private int yearOfPublication;
-    @Column(name = "number_of_page")
+
     private int numberOfPage;
 
     public LecteraryElement() {
 
+    }
+
+    public LecteraryElement( String title,int yearOfPublication,int numberOfPage) {
+        this.yearOfPublication = yearOfPublication;
+        this.title = title;
+        this.numberOfPage = numberOfPage;
+    }
+
+    public String getTitle() {
+        return title;
     }
 }
