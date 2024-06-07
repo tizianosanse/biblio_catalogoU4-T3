@@ -1,13 +1,10 @@
 package tizianosanseverino;
-
+import tizianosanseverino.entities.Magazine;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
-import tizianosanseverino.DAO.BooksDAO;
 import tizianosanseverino.DAO.LecteraryElementDAO;
-import tizianosanseverino.DAO.MagazinesDAO;
-import tizianosanseverino.entities.Book;
-import tizianosanseverino.entities.Magazine;
+
 import tizianosanseverino.enums.Periodicity;
 
 public class Application {
